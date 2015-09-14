@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Address Input Checker</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+	<!-- 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+	<!-- 	<link rel="stylesheet/less" type="text/css" href="styles.less" /> -->
+	<style>
+		.inputdemoBasicUsage md-datepicker {
+			margin-top: 18px;
+		}
+
+		.inputdemoBasicUsage .md-datepicker-button {
+			height: 36px;
+			width: 36px;
+			line-height: 36px;
+		}
+
+		.inputdemoBasicUsage .md-datepicker-input-container {
+			margin-left: 2px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Address/ Zipcode Checker Idea for Harry's</h1>
+			<h3>try putting an address in with the wrong zip code</h3>
+		</div>
+	</div>
+	<div ng-controller="DemoCtrl as ctl" layout="column" class="inputdemoBasicUsage" ng-app="MyApp">
+
+		<md-content md-theme="docs-dark" layout-padding="" layout="row" layout-sm="column">
+<!-- 			<md-input-container>
+				<label>Title</label>
+				<input ng-model="user.title">
+			</md-input-container>
+			<md-input-container>
+				<label>Email</label>
+				<input ng-model="user.email" type="email">
+			</md-input-container> -->
+			<h1></h1>
+		</md-content>
+
+		<md-content layout-padding="">
+			<form name="userForm"  novalidate>
+<!-- 				ng-model-options="{ debounce: 500 }" -->
+
+<!-- 				<div layout="" layout-sm="column">
+					<md-input-container style="width:70%">
+						<label>Company (Disabled)</label>
+						<input ng-model="user.company" disabled="">
+					</md-input-container>
+
+					<md-datepicker ng-model="user.submissionDate" md-placeholder="Enter date"></md-datepicker>
+				</div> -->
+
+				<div layout="" layout-sm="column">
+					<md-input-container flex="">
+						<label>First name</label>
+						<input ng-model="user.firstName">
+					</md-input-container>
+					<md-input-container flex="">
+						<label>Last Name</label>
+						<input ng-model="theMax">
+					</md-input-container>
+				</div>
+
+				<md-input-container flex="">
+					<label>Address</label>
+					<input ng-model="user.address">
+				</md-input-container>
+				<md-input-container md-no-float="">
+					<input ng-model="user.address2" placeholder="Address 2">
+				</md-input-container>
+
+				<div layout="" layout-sm="column">
+					<md-input-container flex="">
+						<label>City</label>
+						<input ng-model="user.city" >
+					</md-input-container>
+					<md-input-container flex="">
+						<label>State</label>
+						<input ng-model="user.state" >
+					</md-input-container>
+					<md-input-container flex="">
+						<label>Postal Code</label>
+						<input ng-model="user.postalCode" required >
+					</md-input-container>
+					
+				</div>
+				<md-button class="md-raised md-primary" ng-click="check()" >Submit</md-button>
+				<br>
+				<code>{{resp}}</code>
+<!-- 
+				<md-input-container flex="">
+					<label>Biography</label>
+					<textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
+				</md-input-container> -->
+
+
+			</form>
+		</md-content>
+
+	</div>
+
+	<!-- 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-messages.min.js"></script>
+	<script src="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.js"></script>
+	<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyArETIRz1FAdQ9EgVsH8KgKHqWUdO0UY24&signed_in=true"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script>
+	<script src="./address.js"></script>
+	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.4.0/less.min.js" type="text/javascript"></script> -->
+</body>
+
+</html>
